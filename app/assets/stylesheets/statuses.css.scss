@@ -1,7 +1,7 @@
 // Place all the styles related to the statuses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body{margin-top:40px;}
+//body{margin-top:40px;}
 
 
 .status{
@@ -24,4 +24,8 @@ body{margin-top:40px;}
 
 .status.hover .admin {
 	display: inline;
+}
+
+#alerts{
+	margin-top:40px;
 }
