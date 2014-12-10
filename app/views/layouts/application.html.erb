@@ -10,21 +10,21 @@
 
 	<!--This is for the navigation bar -->
 	<div class="navbar navbar-default navbar-fixed-top">
-      	<div class="container">
-        	<div class="navbar-header">
-          		<a class="navbar-brand" href="#">Rig Pirate</a>
-        	</div>
-
-        	<div class="navbar-collapse collapse">          	
-	        	<ul class="nav navbar-nav">
-			    	<li class="active"><%= link_to "All statuses", statuses_path %></li>
-			    </ul>
-
-          <ul class="nav navbar-nav  navbar-right">
-            <li><%= link_to "Signup", new_user_registration_path  %></li>
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Rigpirate</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><%= link_to "Status" , statuses_path %></li>
+            <li><a href="#about">About</a></li>          
+            </li>
           </ul>
-        	</div><!--/.nav-collapse -->
-      	</div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%=link_to "Sign Up", new_user_registration_path %></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
     <!--This is the end for the navigation bar -->
 
