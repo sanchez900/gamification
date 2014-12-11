@@ -11,7 +11,6 @@ class StatusesController < ApplicationController
   # GET /statuses/1
   # GET /statuses/1.json
   def show
-    @user = user.find(params[:id])
   end
 
   # GET /statuses/new
@@ -67,11 +66,14 @@ class StatusesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_status
       @status = Status.find(params[:id])
-      @user = User.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def status_params
       params.require(:status).permit(:content, :user_id)
     end
+
+
+
+
 end
