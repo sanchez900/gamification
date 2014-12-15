@@ -3,3 +3,9 @@ patar:
   profile_name: "patar"
   first_name: "pat"
   last_name: "sanc"
+
+patar1:
+  email: "patar1@g.co"
+  profile_name: "patar1"
+  first_name: "pat1"
+  last_name: "sanc1"
