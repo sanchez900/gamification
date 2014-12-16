@@ -38,6 +38,20 @@ class StatusesControllerTest < ActionController::TestCase
     assert_redirected_to status_path(assigns(:status))
   end
 
+
+  test "should create status for the current user who is logged in" do    
+    sign_in users(:patar)
+    assert_difference('Status.count') do
+      post :create, status: { content: @status.content, user_id: users(:patar1).id }
+    end
+
+    assert_redirected_to status_path(assigns(:status))
+    assert_equal assigns(:status).user_id, users(:patar).id
+  end  
+
+
+
+
   test "should show status" do
     get :show, id: @status
     assert_response :success
@@ -54,6 +68,24 @@ class StatusesControllerTest < ActionController::TestCase
     patch :update, id: @status, status: { content: @status.content}
     assert_redirected_to status_path(assigns(:status))
   end
+
+
+
+  test "should not update statusif nothing has changed" do
+    sign_in users(:patar)
+    patch :update, id: @status, status: { content: @status.content, user_id: users(:patar1).id }
+    assert_redirected_to status_path(assigns(:status))
+    assert_equal assigns(:status).user_id, users(:patar).id
+  end
+
+  test "should update status when the current user is logged in" do
+    sign_in users(:patar)
+    patch :update, id: @status, status: { content: @status.content}
+    assert_redirected_to status_path(assigns(:status))
+    assert_equal assigns(:status).user_id, users(:patar).id
+  end
+
+
 
   test "should destroy status" do
     assert_difference('Status.count', -1) do
