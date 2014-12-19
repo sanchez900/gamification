@@ -9,3 +9,9 @@ patar1:
   profile_name: "patar1"
   first_name: "pat1"
   last_name: "sanc1"
+
+patar2:
+  email: "patar2@g.co"
+  profile_name: "patar2"
+  first_name: "pat2"
+  last_name: "sanc2"
