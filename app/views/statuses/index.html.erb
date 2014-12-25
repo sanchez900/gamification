@@ -1,33 +1,162 @@
+<% if user_signed_in? %>
 <div class="page-header">
   <h1>List of statuses</h1>
 </div>
 
-<%= link_to "Post New Status", new_status_path, class: "btn btn-success" %>
+  <%= link_to "Post New Status", new_status_path, class: "btn btn-success" %>
 
-<% @statuses.each do |status| %>
-<div class="status">
-  <div class="row">
+    <% @statuses.each do |status| %>
+    <div class="status">
+      <div class="row">
 
-    <div class="col-md-1">
-      <%= image_tag status.user.gravatar_url %>
-    </div>
+        <div class="col-md-1">
+          <%= image_tag status.user.gravatar_url %>
+        </div>
 
-    <div class="col-md-11">
-      <strong>name:<%= status.user.full_name %></strong>
-      <p><%= status.content %></p>
-      <div class="meta">
-        <%= link_to time_ago_in_words(status.created_at) + " ago   " , status %>
-        <span class="admin"> |
-          <%= link_to "Edit" , edit_status_path(status) %> |
-          <%= link_to "Delete" , status , method: :Delete, data: {confirm: "Are you sure you want to delete"} %>
-        </span>
+        <div class="col-md-11">
+          <strong>name:<%= status.user.full_name %></strong>
+          <p><%= status.content %></p>
+          <div class="meta">
+            <%= link_to time_ago_in_words(status.created_at) + " ago   " , status %>
+            <span class="admin"> |
+              <%= link_to "Edit" , edit_status_path(status) %> |
+              <%= link_to "Delete" , status , method: :Delete, data: {confirm: "Are you sure you want to delete"} %>
+            </span>
+          </div>
+        </div>
       </div>
-    </div>
+
+  </div>
+  <% end %>
+
+  <% else %>
+
+  <div class="container">
+    <p>This is it</p>
   </div>
 
 
+<div id="myCarousel" class="carousel slide">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        
+        <div class="item active">
+          <img alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>A pirates life for me</h1>
+              <p>Looking for adventure?  Pirate booty? Join us now!</p>
+              <p> <%=link_to "Sign up now", register_path , :class => "btn btn-large btn-primary" %></p>
+            </div>
+          </div>
+        </div>
 
-  
+        <div class="item">
+          <img  alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Bored with your work?</h1>
+              <p> Well shiver me timbers! join us now for something that would make your work stress free at the same time fun! </p>
+            </div>
+          </div>
+        </div>
 
-</div>
-<%end%>
+        <div class="item">
+          <img alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Work isn't that fun?</h1>
+              <p>Well board the ships me mates and get to experience a better work experience just like a real life pirate in your office! </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+
+
+
+
+    <!-- Three columns of text below the carousel -->
+      <div class="row" align="center">
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image">
+          <h2>Pirate Booty</h2>
+          <p></p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image">
+          <h2>Adventure</h2>
+          <p></p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/png;base64," data-src="holder.js/140x140" alt="Generic placeholder image">
+          <h2>Fame</h2>
+          <p></p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Why join us? <span class="text-muted">It'll blow your mind or cannon.</span></h2>
+          <p class="lead">To be a Rigpirate is fun and fulfilling</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Adventure? <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Its all fun and games until some gets a pegleg.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">My Booty! <span class="text-muted">Checkmate Sir!.</span></h2>
+          <p class="lead">After a days work of fun and adventure are your self some real reward that you can take home!</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="data:image/png;base64," data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 Mammoth, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+
+
+
+<% end %>
+
