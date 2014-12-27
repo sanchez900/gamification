@@ -12,11 +12,13 @@
 	<div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Rig pirate</a>
+          <%= link_to "Rigpirate" , statuses_path , class: "navbar-brand" %>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
+            <% if user_signed_in? %>
             <li class="active"><%= link_to "Status" , feed_path %></li>
+            <% end %>
             <li><a href="#about">About</a></li>          
             </li>
           </ul>
@@ -26,7 +28,7 @@
 
               <li><%=link_to "Log Out", logout_path %></li>
             <% else %>
-              <li><%=link_to "Sign Up", register_path %></li>
+              <li><%=link_to "Sign up", register_path %></li>
                <li><%=link_to "Login", login_path %></li>
             <% end %>
 
