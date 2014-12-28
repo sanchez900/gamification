@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home/about'
+
   get 'profiles/show'
 
   as :user do
@@ -23,6 +25,7 @@ Rails.application.routes.draw do
   end
 
   get 'feed', to: 'statuses#index', as: :feed
+  get 'about', to: 'home#about', as: :about
 
   root to: "statuses#index"
 
