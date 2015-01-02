@@ -9,12 +9,11 @@ gem 'rails', '4.1.6'
 
 group :test do
 	gem 'shoulda'
+	gem 'factory_girl_rails'
 end
 
 group :development, :test do 
-
-	gem 'sqlite3'
-	
+	gem 'sqlite3'	
 end
 
 
@@ -22,6 +21,9 @@ group :production do
 	gem 'pg'
 end
 
+gem 'state_machine'
+
+gem 'rails_admin'
 
 
 # Use SCSS for stylesheets
