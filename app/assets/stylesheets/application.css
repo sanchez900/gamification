@@ -18,3 +18,9 @@
 	margin-top: 10px;
 }
 
+#pcode {
+	margin-top: 50px;
+	height: 500px;
+	overflow-y: auto;
+}
+

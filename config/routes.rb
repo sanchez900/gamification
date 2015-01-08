@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/piratekings', as: 'rails_admin'
   get 'home/about'
+  get 'home/privacy'
+  get 'home/terms'
 
   get 'profiles/show'
 
@@ -19,7 +21,11 @@ Rails.application.routes.draw do
   end
 
 
-  resource :user_friendships
+  resources :user_friendships do
+    member do
+      put :accept
+    end
+  end
 
   resources :statuses do
     resources :users
