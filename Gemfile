@@ -23,6 +23,10 @@ end
 
 gem 'state_machine'
 
+gem 'draper'
+
+gem 'js-routes'
+
 gem 'rails_admin'
 
 
