@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/piratekings', as: 'rails_admin'
   get 'home/about'
   get 'home/privacy'

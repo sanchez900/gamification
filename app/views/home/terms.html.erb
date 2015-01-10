@@ -1,5 +1,13 @@
 <div class="container">
 	<div>
 		<h1>Terms & conditions</h1>
+
+		<% @terms.each do |terms| %>
+
+			<div>
+				<%=raw terms.info %>
+			</div>
+
+		<% end %>
 	</div>
 </div>

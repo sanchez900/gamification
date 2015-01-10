@@ -25,6 +25,10 @@ gem 'state_machine'
 
 gem 'draper'
 
+gem 'ckeditor'
+
+gem 'paperclip'
+
 gem 'js-routes'
 
 gem 'rails_admin'

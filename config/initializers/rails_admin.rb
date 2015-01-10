@@ -27,8 +27,29 @@ RailsAdmin.config do |config|
     delete
     show_in_app
 
+
+
     ## With an audit adapter, you can add:
     # history_index
     # history_show
   end
+
+   config.model About do
+      edit do
+        field :info, :ck_editor
+      end
+    end
+
+    config.model Privacy do
+      edit do
+        field :info, :ck_editor
+      end
+    end
+
+    config.model Terms do
+      edit do
+        field :info, :ck_editor
+      end
+    end
+
 end
