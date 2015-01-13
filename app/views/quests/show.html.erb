@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @quest.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @quest.longitude %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @quest.address %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @quest.description %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @quest.title %>
+</p>
+
+<%= link_to 'Edit', edit_quest_path(@quest) %> |
+<%= link_to 'Back', quests_path %>

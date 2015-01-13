@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require js-routes
-//= require_tree .
 //= require ckeditor/init
+//= require underscore
+//= require gmaps/google
+//= require_tree .

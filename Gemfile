@@ -33,6 +33,9 @@ gem 'js-routes'
 
 gem 'rails_admin'
 
+gem 'geocoder'
+
+gem 'gmaps4rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
