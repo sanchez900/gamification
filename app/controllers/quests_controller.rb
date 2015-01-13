@@ -17,6 +17,13 @@ class QuestsController < ApplicationController
   end
 
   def show
+    @quests = Quest.all
+    @hash = Gmaps4rails.build_markers(@quests) do |quest, marker|
+      marker.lat quest.latitude
+      marker.lng quest.longitude
+    end
+
+    
     respond_with(@quest)
   end
 
